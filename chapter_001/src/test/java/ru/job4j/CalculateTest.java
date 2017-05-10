@@ -1,8 +1,7 @@
 package ru.job4j;
 
 import org.junit.Test;
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
+
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
@@ -13,15 +12,54 @@ import static org.junit.Assert.assertThat;
 * @version $Id$
 * @since 0.1
 */
+
 public class CalculateTest {
-/**
-* Test add.
-*/
-@Test
-public void whenAddOneToOneThenTwo() {
-	ByteArrayOutputStream out = new ByteArrayOutputStream();
-	System.setOut(new PrintStream(out));
-	Calculate.main(null);
-	assertThat(out.toString(), is(String.format("Hello World.", System.getProperty("line.separator"))));
-}
+
+	/**
+	* Тестирование класса сложение.
+	*/
+	@Test
+    public void whenAddOnePlusOneThenTwo() {
+        Calculate calc = new Calculate();
+        calc.add(1D, 1D);
+        double result = calc.getResult();
+        double expected = 2D;
+        assertThat(result, is(expected));
+    }
+
+	/**
+	* Тестирование класса вычитание.
+	*/
+	@Test
+    public void whenAddOneMinusOneThenTwo() {
+        Calculate calc = new Calculate();
+        calc.deduct(4D, 2D);
+        double result = calc.getResult();
+        double expected = 2D;
+        assertThat(result, is(expected));
+    }
+
+		/**
+	* Тестирование класса деление.
+	*/
+	@Test
+    public void whenAddOneDivideOneThenTwo() {
+        Calculate calc = new Calculate();
+        calc.devide(4D, 2D);
+        double result = calc.getResult();
+        double expected = 2D;
+        assertThat(result, is(expected));
+    }
+
+		/**
+	* Тестирование класса умножение.
+	*/
+	@Test
+    public void whenAddOneMultiplyOneThenTwo() {
+        Calculate calc = new Calculate();
+        calc.multiply(2D, 2D);
+        double result = calc.getResult();
+        double expected = 4D;
+        assertThat(result, is(expected));
+    }
 }
