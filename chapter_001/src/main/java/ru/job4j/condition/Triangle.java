@@ -26,9 +26,6 @@ this.c = c;
 * @return возвращает площадь треугольника.
 */
 public double area() {
-//double p = (double) (this.a.getX() - this.b.getX()) * (this.a.getX() - this.b.getX()) + (this.a.getY() - this.b.getY())*(this.a.getX() - this.b.getY()) + (this.c.getX() - this.c.getY())*(this.c.getX() - this.c.getY());
-double p = (double) ((this.a.getX() - this.c.getX()) * (this.b.getY() - this.c.getY()) - (this.b.getX() - this.c.getX()) * (this.a.getY() - this.c.getY())) / 2;
-
-return p; //Math.sqrt(p * (p - this.a.getX()) * (p - this.c.getY()));
+return (double) ((this.a.getX() - this.c.getX()) * (this.b.getY() - this.c.getY()) - (this.b.getX() - this.c.getX()) * (this.a.getY() - this.c.getY())) / 2;
 }
 }
