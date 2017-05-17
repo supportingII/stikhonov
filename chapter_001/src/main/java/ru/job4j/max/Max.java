@@ -17,4 +17,16 @@ public int max(int first, int second) {
 	return number;
 }
 
+/**
+* Метод для вычисления максимального из трех чисел.
+* @param first первое число.
+* @param second первое число.
+* @param third первое число.
+* @return возвращает максимальное число.
+*/
+public int max(int first, int second, int third) {
+	int number = max(first, second);
+	return max(number, third);
+}
+
 }

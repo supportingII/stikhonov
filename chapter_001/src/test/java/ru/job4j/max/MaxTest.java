@@ -15,7 +15,7 @@ import static org.junit.Assert.assertThat;
 public class MaxTest {
 
 	/**
-	* ������������ ������ Max - ������� �����.
+	* Тестирование класса Max - большее число.
 	*/
 	@Test
 	public void whenOneThenTwo() {
@@ -24,5 +24,16 @@ public class MaxTest {
 	int expected = 4;
 	assertThat(result, is(expected));
 }
+
+	/**
+	* Тестирование класса Max - большее число.
+	*/
+	@Test
+	public void whenFirstSecondThirdThenMax() {
+	Max number = new Max();
+	int result = number.max(2, 4, 3);
+	int expected = 4;
+	assertThat(result, is(expected));
+	}
 
 }
