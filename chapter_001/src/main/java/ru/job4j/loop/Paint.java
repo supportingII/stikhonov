@@ -17,7 +17,7 @@ public class Paint {
 			for (int b = 1; b <= count; b++) {
 				s.append("^");
 			}
-			if (a % 2 != 0) {
+			if (a != h) {
 				s.append("\r\n\r\n");
 			}
 			count += 2;

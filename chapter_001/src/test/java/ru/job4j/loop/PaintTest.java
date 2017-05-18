@@ -24,4 +24,16 @@ public class PaintTest {
 		String expected = String.format("^%s%s^^^", line, line);
 		assertThat(result, is(expected));
 	}
+
+/**
+*
+*/
+@Test
+	public void whenPaintPiramideWithHeightThreeThenStringPiramide() {
+		final String line = System.getProperty("line.separator");
+		Paint piramide = new Paint();
+		String result = piramide.piramid(3);
+		String expected = String.format("^%s%s^^^%s%s^^^^^", line, line, line, line);
+		assertThat(result, is(expected));
+	}
 }
