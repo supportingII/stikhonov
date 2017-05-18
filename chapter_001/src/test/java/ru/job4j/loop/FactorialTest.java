@@ -15,10 +15,21 @@ public class FactorialTest {
 	* Метод тестирует вычисление факториала класса - Factorial.
 	*/
 	@Test
-	public void whenFactorialNumberThenSumm() {
+	public void whenFactorialNumberFiveThenResult() {
 		Factorial summ = new Factorial();
 		int result = summ.calc(5);
 		int expected = 120;
+		assertThat(result, is(expected));
+	}
+
+	/**
+	* Метод тестирует вычисление факториала класса - Factorial.
+	*/
+	@Test
+	public void whenFactorialNumberZeroThenResult() {
+		Factorial summ = new Factorial();
+		int result = summ.calc(0);
+		int expected = 1;
 		assertThat(result, is(expected));
 	}
 }
