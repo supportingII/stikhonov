@@ -16,7 +16,8 @@ public int add(int start, int finish) {
 		int summa = 0;
 		for ( ; start <= finish; start++) {
 			if (start % 2 == 0) {
-				summa = summa + start;
+				//summa = summa + start;
+				summa += start;
 			}
 	}
 	return summa;

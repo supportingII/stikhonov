@@ -13,8 +13,9 @@ public class Max {
 * @return number наибольшее число.
 */
 public int max(int first, int second) {
-	int number = first > second ? first : second;
-	return number;
+	//int number = first > second ? first : second;
+	//return number;
+	return first > second ? first : second;
 }
 
 /**
