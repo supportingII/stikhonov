@@ -21,7 +21,7 @@ public class PaintTest {
 		final String line = System.getProperty("line.separator");
 		Paint piramide = new Paint();
 		String result = piramide.piramid(2);
-		String expected = String.format("^%s%s^^^", line, line);
+		String expected = String.format(" ^%s^^^", line);
 		assertThat(result, is(expected));
 	}
 
@@ -33,7 +33,7 @@ public class PaintTest {
 		final String line = System.getProperty("line.separator");
 		Paint piramide = new Paint();
 		String result = piramide.piramid(3);
-		String expected = String.format("^%s%s^^^%s%s^^^^^", line, line, line, line);
+		String expected = String.format("  ^%s ^^^%<s^^^^^", line);
 		assertThat(result, is(expected));
 	}
 }

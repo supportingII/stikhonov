@@ -13,23 +13,27 @@ public class Board {
 		StringBuilder s = new StringBuilder();
 		for (int a = 1; a <= height; a++) {
 			for (int b = 1; b <= width; b++) {
-				if (a % 2 != 0) {
-					if (b % 2 == 0) {
-						s.append(" ");
-						} else {
-						s.append("x");
-						}
-				} else {
-					if (b % 2 == 0) {
-						s.append("x");
+				if ((a + b) % 2 == 0) {
+					s.append("x");
 						} else {
 						s.append(" ");
 						}
-			}
-		}
-		s.append("\r\n");
-	}
+				}
+				s.append("\r\n");
+				}
 	String x = s.toString();
 	return x;
+	}
 }
+/**if (a % 2 != 0) {
+if (b % 2 == 0) {
+s.append(" ");
+} else {
+s.append("x");
 }
+} else {
+if (b % 2 == 0) {
+s.append("x");
+} else {
+s.append(" ");
+}*/

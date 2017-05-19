@@ -11,18 +11,26 @@ public class Paint {
 	* @return z возвращает строку,с пирамидкой.
 	*/
 	public String piramid(int h) {
-		int count = 1;
-		StringBuilder s = new StringBuilder();
-		for (int a = 1; a <= h; a++) {
-			for (int b = 1; b <= count; b++) {
-				s.append("^");
-			}
-			if (a != h) {
-				s.append("\r\n\r\n");
-			}
-			count += 2;
-		}
-		String z = s.toString();
-		return z;
-	}
+        int count = 1;
+        int whitespace = h;
+        StringBuilder s = new StringBuilder();
+        for (int a = 1; a <= h; h--) {
+            for (int b = 1; b <= count;) {
+                if (whitespace != 1) {
+                    s.append(" ");
+                    whitespace--;
+                } else {
+                    s.append("^");
+                    b++;
+                }
+            }
+            if (a != h) {
+                s.append("\r\n");
+            }
+            whitespace = h - 1;
+            count += 2;
+        }
+        String z = s.toString();
+        return z;
+    }
 }
