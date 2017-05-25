@@ -24,4 +24,16 @@ public class TurnTest {
 		int[] expected = {5, 4, 3, 2, 1};
 		assertThat(result, is(expected));
 	}
+
+	/**
+	*
+	*/
+	@Test
+    public void whenTurnArrayWithEvenAmountOfElementsThenTurnedArray() {
+		int[] a = {4, 1, 6, 2};
+		Turn array = new Turn();
+		int[] result = array.back(a);
+		int[] expected = {2, 6, 1, 4};
+		assertThat(result, is(expected));
+	}
 }
