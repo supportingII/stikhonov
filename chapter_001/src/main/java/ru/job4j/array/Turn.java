@@ -9,7 +9,7 @@ public class Turn {
 	* @param array массив чисел.
 	* @return array возвращаем перевернутый массив.
 	*/
-	public static int[] back(int[] array) {
+	/*public static int[] back(int[] array) {
             int a, b;
             int maxIndex = array.length - 1;
             for (int index = 0; index <= maxIndex; index++) {
@@ -25,4 +25,20 @@ public class Turn {
             }
     return array;
     }
+	*/
+
+	/**
+	* Метод для переворачивания массива.
+	* @param array массив чисел.
+	* @return array возвращаем перевернутый массив.
+	*/
+	public static int[] back(int[] array) {
+    int a;
+    for (int index = 0; index <= (array.length / 2) - 1; index++) {
+         a = array[ index ];
+         array[ index ] = array[ array.length - index - 1 ];
+         array[ array.length - index - 1 ] = a;
+      }
+        return array;
+      }
 }
