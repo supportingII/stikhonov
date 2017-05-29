@@ -10,20 +10,19 @@ public class BubbleSort {
 	* @return array возвращаем перевернутый массив.
 	*/
 	public int[] sort(int[] array) {
-		int a, x;
-		for (boolean b = true; b;) {
-			x = 0;
-			for (int index = 1; index <= array.length - 1; index++) {
-				if (array[index - 1] > array[index]) {
-					a = array[index - 1];
-					array[index - 1] = array[index];
-					array[index] = a;
-					x++;
-				}
-				if (x == 0) {
-					b = false;
+		int a, x = 0;
+		boolean notReady = true;
+		while (notReady) {
+			notReady = false;
+			for (int index = 0; index <= array.length - x - 2; index++) {
+				if (array[index] > array[index + 1]) {
+					a = array[index];
+					array[index] = array[index + 1];
+					array[index + 1] = a;
+					notReady = true;
 				}
 			}
+			x++;
 		}
 		return array;
 	}
