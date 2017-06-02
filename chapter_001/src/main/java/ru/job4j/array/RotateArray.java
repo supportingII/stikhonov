@@ -11,14 +11,14 @@ public class RotateArray {
 	*/
 	public int[][] rotate(int[][] array) {
 		int temp; //Параметр для хранения первого значения
-		int z = 0, x = array.length - 1; //Статичные параметры
+		int x = array.length - 1; //Статичные параметры
 		int	u = array.length - 1; //Изменяемые параметры
 			for (int a = 0; a <= array.length - 2; a++) {
-				temp = array[z][a];
-				array[z][a] = array[u][z];
-				array[u][z] = array[x][u];
+				temp = array[0][a];
+				array[0][a] = array[u][0];
+				array[u][0] = array[x][u];
 				array[x][u] = array[a][x];
-				array[a][x] = temp;				
+				array[a][x] = temp;
 				u--;
 			}
 		return array;
