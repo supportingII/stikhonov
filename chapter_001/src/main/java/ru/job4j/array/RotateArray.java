@@ -10,6 +10,24 @@ public class RotateArray {
 	* @return array возвращаем перевернутый массив.
 	*/
 	public int[][] rotate(int[][] array) {
+		int temp;
+		int z = 0, x = array.length - 1, y = 0, u = array.length - 1 ;
+			for (int b = 1; b <= array.length - 1; b++) {
+				temp = array[z][y];
+				array[z][y] = array[u][z];
+				array[u][z] = array[x][u];
+				array[x][u] = array[y][x];
+				array[y][x] = temp;
+				y++;
+				u--;
+			}
+		return array;
+	}
+}
+
+
+/**
+	public int[][] rotate(int[][] array) {
 		int rememberOne = 0, rememberTwo = 0, z;
         boolean first;
 		// Цикл определяющий кол-во проходов по всему массиву.
@@ -17,7 +35,7 @@ public class RotateArray {
         for (int a = 1; a <= array.length - 1; a++) {
             first  = true;
             z = 0;
-			// Цикл отвечающий за верхнюю грань
+			// Цикл отвечающий за верхнюю грань и первый проход
             for (int b = 0; b <= array.length - 2; b++) {
                 rememberOne = rememberTwo;
                 rememberTwo = array[z][b + 1];
@@ -52,4 +70,4 @@ public class RotateArray {
         }
         return array;
 	}
-}
+	*/
