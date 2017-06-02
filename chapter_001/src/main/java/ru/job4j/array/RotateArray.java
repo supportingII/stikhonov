@@ -10,15 +10,15 @@ public class RotateArray {
 	* @return array возвращаем перевернутый массив.
 	*/
 	public int[][] rotate(int[][] array) {
-		int temp;
-		int z = 0, x = array.length - 1, y = 0, u = array.length - 1 ;
-			for (int b = 1; b <= array.length - 1; b++) {
-				temp = array[z][y];
-				array[z][y] = array[u][z];
+		int temp; //Параметр для хранения первого значения
+		int z = 0, x = array.length - 1; //Статичные параметры
+		int	u = array.length - 1; //Изменяемые параметры
+			for (int a = 0; a <= array.length - 2; a++) {
+				temp = array[z][a];
+				array[z][a] = array[u][z];
 				array[u][z] = array[x][u];
-				array[x][u] = array[y][x];
-				array[y][x] = temp;
-				y++;
+				array[x][u] = array[a][x];
+				array[a][x] = temp;				
 				u--;
 			}
 		return array;
