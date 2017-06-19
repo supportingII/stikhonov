@@ -42,7 +42,7 @@ public class RotateArrayTest {
         int[][] a = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}, {13, 14, 15, 16}};
 		RotateArray array = new RotateArray();
 		int[][] result = array.rotate(a);
-		int[][] expected = {{13, 9, 5, 1}, {14, 6, 7, 2}, {15, 10, 11, 3}, {16, 12, 8, 4}};
+		int[][] expected = {{13, 9, 5, 1}, {14, 10, 6, 2}, {15, 11, 7, 3}, {16, 12, 8, 4}};
 		assertThat(result, is(expected));
     }
 }
